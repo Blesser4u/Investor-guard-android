@@ -1,17 +1,39 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "module": "esnext",
+    "target": "es2017",
+    "lib": ["dom", "es2015"],
+    "jsx": "react-native",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "components/screen/Database.ts",
+    "components/screen/ScamsScreen/ReportedScams.tsx",
+    "components/screen/FreeCourses/ScamsScreen/ReportedScams.tsx",
+    "components/screen/FreeCourses/ScamsScreen/ScamAwareness.tsx",
+    "SQLdatabase.ts",
+    "app/(tabs)/Contactus.tsx",
+    "app/(tabs)/index.tsx",
+    "firebaseConfig.ts",
+    "firebaseConfig.d.ts",
+    "src/types/react-native-progress.d.ts"
+, "components/screen/ScamsScereen/ReportScam.js", "components/screen/ScamsScereen/ScamContext.tsx", "components/screen/ScamsScereen/ScamAlert.tsx"  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
   ]
 }
